@@ -47,3 +47,11 @@ print(disemvowel('This website is for losers LOL!'))
             new_sp.append(i)
     return ' '.join(new_sp)
 print(spin_words('This sentence is a sentence'))'''
+
+def printer_error(s):
+    count = 0
+    for i in s:
+        if i in 'noprstuzxvqwy':
+            count += 1
+    return f'{count}/{len(s)}'
+print(printer_error('aaaaabbbbbzzz'))
