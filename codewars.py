@@ -63,8 +63,11 @@ class Music:
         self.century = century
     def info(self):
         print(f'{self.name} - композитор {self.century} века. {self.name} писал музыку в жанре {self.genre}.')
+    def packman (self, victim):
+        print(f'{self.name} укусил падлу {victim} за жопку -- остался {victim[3:].capitalize()}')
 
 beethoven = Music('Beethoven', 'romanticism', 'XIX')
 mozart = Music('Mozart', 'classicism', 'XVIII')
 bach = Music('Bach', 'barocco', 'XVIII')
-mozart.info(),bach.info(),beethoven.info()
+# mozart.info(),bach.info(),beethoven.info()
+beethoven.packman(mozart.name)
