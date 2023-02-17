@@ -48,10 +48,23 @@ print(disemvowel('This website is for losers LOL!'))
     return ' '.join(new_sp)
 print(spin_words('This sentence is a sentence'))'''
 
-def printer_error(s):
+'''def printer_error(s):
     count = 0
     for i in s:
         if i in 'noprstuzxvqwy':
             count += 1
     return f'{count}/{len(s)}'
-print(printer_error('aaaaabbbbbzzz'))
+print(printer_error('aaaaabbbbbzzz'))'''
+
+class Music:
+    def __init__(self, name, genre, century):
+        self.name = name
+        self.genre = genre
+        self.century = century
+    def info(self):
+        print(f'{self.name} - композитор {self.century} века. {self.name} писал музыку в жанре {self.genre}.')
+
+beethoven = Music('Beethoven', 'romanticism', 'XIX')
+mozart = Music('Mozart', 'classicism', 'XVIII')
+bach = Music('Bach', 'barocco', 'XVIII')
+mozart.info(),bach.info(),beethoven.info()
