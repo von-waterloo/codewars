@@ -55,7 +55,7 @@ print(spin_words('This sentence is a sentence'))'''
             count += 1
     return f'{count}/{len(s)}'
 print(printer_error('aaaaabbbbbzzz'))'''
-
+'''
 class Music:
     def __init__(self, name, genre, century):
         self.name = name
@@ -71,3 +71,40 @@ mozart = Music('Mozart', 'classicism', 'XVIII')
 bach = Music('Bach', 'barocco', 'XVIII')
 # mozart.info(),bach.info(),beethoven.info()
 beethoven.packman(mozart.name)
+'''
+
+
+# def solution(number):
+#     summ = 0
+#     if number < 0:
+#         summ = 0
+#     else:
+#         for i in range(0, number):
+#             if i%3 ==0:
+#                 summ +=i
+#             if i%5 ==0:
+#                 summ +=i
+#             if i%15 == 0:
+#                 summ -=i
+#
+#     return summ
+# print(solution(200))
+
+def solution(stringa):
+    new_stringa = ''
+    if len(stringa) % 2 == 0:
+        new_stringa = stringa
+    else:
+        new_stringa = stringa + '_'
+    count0 = 0
+    count1 = 1
+    new_list = []
+    for i in new_stringa:
+        if count1 < len(new_stringa):
+            new_list.append(new_stringa[count0] + new_stringa[count1])
+        count0 += 1
+        count1 += 1
+    return new_list
+
+
+print(solution('sdjkhshjankjb'))
